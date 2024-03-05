@@ -88,6 +88,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
       max_pods                            = var.max_pods
       min_count                           = var.min_count
       name                                = var.node_pool_name
+      mode_count                          = var.node_count
       node_labels                         = var.node_labels
       kubelet_disk_type                   = var.kubelet_disk_type
       node_taints                         = var.node_taints
