@@ -1,6 +1,6 @@
 
 module "naming-convention" {
-  source = "localterraforn.com/AzurePHR/naming-convention/azurere"
+  source = "localterraforn.com/AzurePMR/naming-convention/azurere"
   version = "1.0.1"
 }
 
@@ -13,73 +13,15 @@ resource "random_id" "prefix" {
 resource "azurerm_user_assigned_identity" "aks" {
   location            = var.location
   name                = "${random_id.prefix.hex}-identity"
-  resource_group_name = azurerm_resource_group.rg.name
-}
-
-
-
-
-  resource "azurer_resource_group" "rg" {
-    name = "${module.naming-convention.short_resource.azurerm_resource_group}-${var.short_location}-${var.short_env}-${var.ait}-${var.short_name}-aks"
-    location = var.location
-
-    tags = local.tags
-
-    lifecycle {
-      ignore_changes = [
-        tags["CreatedDate"],
-        tags["Environment"],
-        tags["AIT"],
-        tags["RunID"],
-        tags["CostCenter"],
-      ]
-    }
-  }
-
-  resource "azurer_virtual_network" "aks" {
-    name = "${module.naming-convention.short_resource.azurerm_virtual_network}-${var.short_location}-${var.short_env}-${var.ait}-${var.short_name}"
-    resource_group_name = azurer_resource_group.rg.name
-    location = var.location
-    address_space = var.vnet_address_space
-    tags = local.tags
-
-    lifecycle {
-      ignore_changes = [
-        tags["CreatedDate"],
-        tags["Environment"],
-        tags["AIT"],
-        tags["CostCenter"],
-        tags["RunID"],
-      ]
-    }
-}
-
-
-resource "azurerm_subnet" "subnet" {
-  name = "${module.naming-convention.short_resource.azurerm_subnet}-${var.short_location}-${var.short_env}-${var.ait}-${var.short_name}"
-  resource_group_name = azurerm_resource_group.rg.name
-  virtual_network_name = azurerm_virtual_network.aks.name
-  address_prefixes    = var.address_prefixes
-  tags = local.tags
-
-  lifecycle {
-    ignore_changes = [
-      tags["CreatedDate"],
-      tags["Environment"],
-      tags["AIT"],
-      tags["CostCenter"],
-      tags["RunID"],
-      ]
-    }
-}
+  resource_group_name = var.resource_group
 
 
 resource "azurerm_kubernetes_cluster" "aks" {
-  resource_group_name                     = azurerm_resource_group.rg.name
-  node_resource_group                     = ${module.naming-convention.short_resource.azurerm_node_pool}-${var.short_location}-${var.short_env}-${var.ait}-${var.short_name}
+  resource_group_name                     = var.resource_group
+  node_resource_group                     = var.node_resource_group
   kubernetes_version                      = var.kubernetes_master_version
   location                                = var.location
-  name                                    = ${module.naming-convention.short_resource.azurerm_resource_group}-${var.short_location}-${var.short_env}-${var.ait}-${var.short_name}-np
+  name                                    = ${module.naming-convention.short_resource.azurerm_kubernetes_cluster}-${var.short_location}-${var.short_env}-${var.ait}-${var.short_name}-np
   sku_tier                                = var.sku_tier
   default_node_pool {
       enable_auto_scaling                 = var.enable_auto_scaling
@@ -151,7 +93,5 @@ resource "azurerm_kubernetes_cluster" "aks" {
     }
   }
 
-
-depends_on = [azurerm_subnet.subnet]
 
 }
