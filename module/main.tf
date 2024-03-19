@@ -95,3 +95,27 @@ resource "azurerm_kubernetes_cluster" "aks" {
 
 
 }
+
+####Private ENdpoint ####
+resource "azurerm_private_endpoint" "aks" {
+  name                = ${module.naming-convention.short_resource.azurerm_private_endpoint}-${var.short_location}-${var.short_env}-${var.ait}-${var.short_name}
+  location            = var.location
+  resource_group_name = var.resource_group
+  subnet_id           = data.azurerm_subnet.aks.id
+
+  private_service_connection {
+    name                           = var.name_private_connection
+    private_connection_resource_id = azurerm_kubernetes_cluster.aks.id
+    subresource_names              = var.subresource_name 
+    request_message                = jsonencode({
+      "properties": {
+        "publicNetworkAccess": "Disabled"
+      }
+    })
+  }
+
+data "azurerm_subnet" "aks" {
+  name                 = var.subnet_name
+  virtual_network_name = var.vnet_name
+  resource_group_name  = var.vnet_rg_name
+}
