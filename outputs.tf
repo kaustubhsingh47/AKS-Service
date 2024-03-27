@@ -7,5 +7,5 @@ output "app_service_plan_name" {
 }
 
 output "app_service_plan_per_site_scaling" {
-  value = azurerm_app_service_plan.asp.per_site_scaling
+  value = azurerm_app_service_plan.asp.per_site_scaling_enabled
 }
