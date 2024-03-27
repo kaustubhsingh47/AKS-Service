@@ -27,3 +27,5 @@ resource "azurerm_service_plan" "asp" {
       ]
   }
 }
+
+# logic apps
