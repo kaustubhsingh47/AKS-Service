@@ -8,9 +8,6 @@ resource "azurerm_service_plan" "asp" {
   sku_name                     = var.sku_name
   os_type                      = var.os_type
 
-  
-#(Optional) The kind of the App Service Plan to create. Possible values are Windows, Linux, elastic and FunctionApp. Defaults to Windows.
-  kind                         = var.asp_kind 
 
 #The maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan.
   maximum_elastic_worker_count = var.maximum_elastic_worker_count
