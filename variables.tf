@@ -23,7 +23,7 @@ variable "os_type" {
   type        = string
 }
 
-variable "per_site_scaling" {
+variable "per_site_scaling_enabled" {
   description = "Can Apps assigned to this App Service Plan be scaled independently? If set to false apps assigned to this plan will scale to all instances of the plan. Defaults to false."
   type        = bool
 }
