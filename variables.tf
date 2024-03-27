@@ -8,11 +8,6 @@ variable "location" {
   type        = string
 }
 
-variable "asp_kind" {
-  description = "The kind of the Service Plan to create. Possible values are Windows, Linux, elastic, and FunctionApp. Defaults to Windows."
-  type        = string
-}
-
 variable "maximum_elastic_worker_count" {
   description = "The maximum number of total workers allowed for this ElasticScaleEnabled Service Plan."
   type        = number
