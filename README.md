@@ -1,4 +1,4 @@
-# AKS-Service
+# LOGic APP
 
 ## Background and Strategic fit
 
