@@ -19,7 +19,7 @@ Logic App Landing Zone Level 2 involves setting up application storage accounts,
 Logic App Landing Zone Level 3 includes configuring OS images, load balancers, VM scale sets, virtual machines, additional storage accounts, app service plans, Logic Apps, and storage shares. This level focuses on the specific infrastructure needed for running and scaling applications.
 
 
-## Prerequisite 
+### Prerequisite 
 
 To execute the Application Landing Zone Templates below are the steps required 
 
