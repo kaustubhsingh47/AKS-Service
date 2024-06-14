@@ -8,7 +8,7 @@ Enabling Logic Apps at each level of the landing zones is crucial to automate wo
 
 Azure Logic Apps provide a scalable and flexible framework that can adapt to the evolving needs of applications and workloads. They improve monitoring, alerting, and maintenance of the infrastructure services, making the management of resources more effective.
 
-### Role of Logic Apps in Landing Zones:
+ Role of Logic Apps in Landing Zones:
 
 Logic App Landing Zone Level 0 establishes resource groups and role assignments for subscriptions, hubs, and resource groups. This level provides the initial setup needed for organizing and securing resources.
 
@@ -19,7 +19,7 @@ Logic App Landing Zone Level 2 involves setting up application storage accounts,
 Logic App Landing Zone Level 3 includes configuring OS images, load balancers, VM scale sets, virtual machines, additional storage accounts, app service plans, Logic Apps, and storage shares. This level focuses on the specific infrastructure needed for running and scaling applications.
 
 
-### Prerequisite 
+## Prerequisite 
 
 To execute the Application Landing Zone Templates below are the steps required 
 
