@@ -41,7 +41,10 @@ To execute the Application Landing Zone Templates below are the steps required
 
 
 
-## Architecture Design 
+## Architecture Design
+![Screenshot 2024-06-13 at 8 46 29 PM](https://github.com/kaustubhsingh47/AKS-Service/assets/96336281/125f086a-5ee6-436a-ad18-c0aebbf5921e)
+
+
 
 This architecture diagram for logic apps illustrates a hybrid integration between Azure services and an on-premises SQL Server database, typically used to securely access on-premises data from cloud-based applications. Below a step-by-step breakdown of the process:
 
