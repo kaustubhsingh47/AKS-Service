@@ -32,3 +32,32 @@ To execute the Application Landing Zone Templates below are the steps required
 4. Create Storage Account for logic Apps to store states, configuration, logs and the storage account is used to store connector definitions and other related metadata, Role Assignments Required for Logic App  have the required permissions to read, write, and manage data in the storage account.
 
 5. Create Logic App Standard Environment provides a dedicated, scalable environment for running Logic Apps, ensuring better performance, reliability, and management capabilities. Environment Standardization Ensures that all Logic Apps operate in a consistent environment, simplifying management and troubleshooting.
+
+
+
+
+
+
+
+
+
+## Architecture Design 
+
+This architecture diagram for logic apps illustrates a hybrid integration between Azure services and an on-premises SQL Server database, typically used to securely access on-premises data from cloud-based applications. Below a step-by-step breakdown of the process:
+
+1. External Request: A request originates from an external source, such as a web application or a user, and is directed towards the cloud-based API Management service.
+
+2. API Management: Azure API Management receives the request and acts as the gateway, handling tasks like authentication, authorization, and throttling.
+
+3. Logic Apps: The request is then passed to Azure Logic Apps, a cloud-based service that automates workflows and integrates applications, data, and services across organizations.
+
+- 3a. Azure Key Vault: Logic Apps can securely retrieve secrets and credentials from Azure Key Vault as needed for authentication and secure operations.
+- 3b. On-premises Data Gateway: Logic Apps uses the On-premises Data Gateway to securely connect to on-premises resources.
+
+4. On-premises Data Gateway: The gateway securely transmits requests from Logic Apps to the on-premises SQL Server. This gateway acts as a bridge, enabling secure communication between cloud services and on-premises resources.
+
+5. SQL Server: The request reaches the on-premises SQL Server, which processes the query or command and returns the results.
+
+6. Azure Monitor: Throughout this process, Azure Monitor keeps track of the performance and health of the entire workflow, logging activities and potentially sending alerts if issues are detected.
+
+By combining these components, this architecture allows for secure and managed access to on-premises data from cloud-based applications, ensuring security, scalability, and monitoring capabilities.
