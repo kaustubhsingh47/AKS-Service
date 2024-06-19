@@ -61,6 +61,10 @@ This architecture diagram for logic apps illustrates a hybrid integration betwee
 
 5. SQL Server: The request reaches the on-premises SQL Server, which processes the query or command and returns the results.
 
+6. Azure Monitor: Throughout this process, Azure Monitor keeps track of the performance and health of the entire workflow, logging activities and potentially sending alerts if issues are detected.
+
+By combining these components, this architecture allows for secure and managed access to on-premises data from cloud-based applications, ensuring security, scalability, and monitoring capabilities.
+
 
 
 ### Technical Overview of App Service Environment v3 in a Landing Zone (LZ3)
@@ -73,8 +77,3 @@ Deploy Logic Apps to automate workflows, such as processing data or triggering a
 
  Configure the gateway to allow secure data transfer between on-premises SQL Server and Logic Apps. Ensure hybrid connectivity scenarios are securely managed via VPN or ExpressRoute.
 
-
-
-6. Azure Monitor: Throughout this process, Azure Monitor keeps track of the performance and health of the entire workflow, logging activities and potentially sending alerts if issues are detected.
-
-By combining these components, this architecture allows for secure and managed access to on-premises data from cloud-based applications, ensuring security, scalability, and monitoring capabilities.
