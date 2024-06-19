@@ -61,6 +61,20 @@ This architecture diagram for logic apps illustrates a hybrid integration betwee
 
 5. SQL Server: The request reaches the on-premises SQL Server, which processes the query or command and returns the results.
 
+
+
+### Technical Overview of App Service Environment v3 in a Landing Zone (LZ3)
+
+App Service Environment v3, when integrated with Logic Apps and App Service Plan in a Landing Zone 3 (LZ3) architecture, provides a robust, secure, and scalable environment for deploying and managing enterprise applications. This setup ensures isolated and high-performance hosting, automated workflows, and seamless integration with both Azure and on-premises resources.
+
+ Deploy ASEv3 in a dedicated VNet within the LZ3 architecture, ensuring isolation and network security. Allocate separate subnets for ASEv3 and other components such as Logic Apps and the On-premises Data Gateway.
+
+Deploy Logic Apps to automate workflows, such as processing data or triggering actions based on specific events.  Use connectors to integrate Logic Apps with other services, such as SQL Server via the On-premises Data Gateway.
+
+ Configure the gateway to allow secure data transfer between on-premises SQL Server and Logic Apps. Ensure hybrid connectivity scenarios are securely managed via VPN or ExpressRoute.
+
+
+
 6. Azure Monitor: Throughout this process, Azure Monitor keeps track of the performance and health of the entire workflow, logging activities and potentially sending alerts if issues are detected.
 
 By combining these components, this architecture allows for secure and managed access to on-premises data from cloud-based applications, ensuring security, scalability, and monitoring capabilities.
