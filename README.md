@@ -77,3 +77,37 @@ Deploy Logic Apps to automate workflows, such as processing data or triggering a
 
  Configure the gateway to allow secure data transfer between on-premises SQL Server and Logic Apps. Ensure hybrid connectivity scenarios are securely managed via VPN or ExpressRoute.
 
+
+
+## List of resources
+
+Here's a list of resources used across the different levels of the Logic App Landing Zone:
+
+Logic App Landing Zone Level 0
+- Resource Groups
+- Role Assignments
+- Subscriptions
+- Hubs
+
+Logic App Landing Zone Level 1
+- Networking
+- Key Vault
+- Storage Accounts (for storing artifacts)
+
+Logic App Landing Zone Level 2
+- Application Storage Accounts
+- Disk Encryption
+- Storage Containers
+- Key Vault Keys
+- Network Watchers
+- App Service Environments
+
+Logic App Landing Zone Level 3
+- OS Images
+- Load Balancers
+- VM Scale Sets
+- Virtual Machines
+- Additional Storage Accounts
+- App Service Plans
+- Logic Apps
+- Storage Shares
