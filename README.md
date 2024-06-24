@@ -98,10 +98,6 @@ Here's a list of resources used across the different levels of the Logic App Lan
 | Virtual Network (VNet)           | **1**     | vnet-eus-d-71148-logap                                                               | rg-eus-d-71148-logap   |
 
 
-/
-/
-/
-
 
 ### Logic App Landing Zone Level 2
 
@@ -119,35 +115,16 @@ Here's a list of resources used across the different levels of the Logic App Lan
 
 
 
+### Logic App Landing Zone Level 3
+
+| Tenant |  Subscription             | Workspace Name | Location | 
+|:-------|:-------------------------:|----------------|----------|
+| CORP3  | sub-corp3-d-71148-apptest |                | East US  | 
+
+
+| Resource Type        |  Quantity | Name of Resource              | Resource Group         |
+|:---------------------|:---------:|-------------------------------|------------------------|
+| Logic App (Standard) | **1**     | la-eus-d-71148-logap-standard | rg-eus-d-71148-logap   |
 
 
 
-Logic App Landing Zone Level 0
-- Resource Groups
-- Role Assignments
-- Subscriptions
-- Hubs
-
-Logic App Landing Zone Level 1
-- Networking
-- Key Vault
-- Storage Accounts (for storing artifacts)
-
-Logic App Landing Zone Level 2
-
-- Storage Accounts 
-- Disk Encryption
-- Storage Containers
-- Key Vault Keys
-- Network Watchers
-- App Service Environments
-
-Logic App Landing Zone Level 3
-- OS Images
-- Load Balancers
-- VM Scale Sets
-- Virtual Machines
-- Additional Storage Accounts
-- App Service Plans
-- Logic Apps
-- Storage Shares
