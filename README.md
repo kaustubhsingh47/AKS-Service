@@ -91,14 +91,17 @@ Here's a list of resources used across the different levels of the Logic App Lan
 | CORP3  | sub-corp3-d-71148-apptest |                | East US  | 
 
 
-| Resource Type        |  Quantity | Name of Resource                           | Resource Group         |
-|:---------------------|:---------:|--------------------------------------------|------------------------|
-| Storage Account      | **2**     | saeusd71148logapstdla, saeusd71148logapstd | rg-eus-d-71148-logap-p |
-| App Service Plan     | **1**     | sp-eus-d-71148-logap-std-la                | rg-eus-d-71148-logap-p |
-| Logic App (Standard) | **1**     | la-eus-d-71148-logap-std-la                | rg-eus-d-71148-logap   |
-| Disk Encryption Set  | **1**     | des-eus-d-71148-logap                      | rg-eus-d-71148-logap-p |
+| Resource Type                    |  Quantity | Name of Resource                                                                     | Resource Group         |
+|:---------------------------------|:---------:|--------------------------------------------------------------------------------------|------------------------|
+| Key Vault                        | **1**     | kv-eus-d-71148-logap-std                                                             | rg-eus-d-71148-logap-p |
+| Network Security Group (NSG)     | **3**     | nsg-eus-d-71148-logap-business, nsg-eus-d-71148-logap-app, nsg-eus-d-71148-logap-web | rg-eus-d-71148-logap-p |
+| Virtual Network (VNet)           | **1**     | vnet-eus-d-71148-logap                                                               | rg-eus-d-71148-logap   |
 
-##### 
+
+/
+/
+/
+
 
 ### Logic App Landing Zone Level 2
 
