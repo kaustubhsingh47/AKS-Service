@@ -83,6 +83,18 @@ Deploy Logic Apps to automate workflows, such as processing data or triggering a
 
 Here's a list of resources used across the different levels of the Logic App Landing Zone:
 
+
+| Left |  Center  | Right |
+|:-----|:--------:|------:|
+| L0   | **bold** | $1600 |
+| L1   |  `code`  |   $12 |
+| L2   | _italic_ |    $1 |
+
+
+
+
+
+
 Logic App Landing Zone Level 0
 - Resource Groups
 - Role Assignments
@@ -95,7 +107,8 @@ Logic App Landing Zone Level 1
 - Storage Accounts (for storing artifacts)
 
 Logic App Landing Zone Level 2
-- Application Storage Accounts
+
+- Storage Accounts 
 - Disk Encryption
 - Storage Containers
 - Key Vault Keys
