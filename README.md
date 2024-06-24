@@ -84,11 +84,12 @@ Deploy Logic Apps to automate workflows, such as processing data or triggering a
 Here's a list of resources used across the different levels of the Logic App Landing Zone:
 
 
-| Left |  Center  | Right |
-|:-----|:--------:|------:|
-| L0   | **bold** | $1600 |
-| L1   |  `code`  |   $12 |
-| L2   | _italic_ |    $1 |
+| Resource Type   |  Quantity | Name of Resource |
+|:----------------|:---------:|-----------------:|
+| Storage Account | **2**     | saeusd71148logapstdla
+                                 saeusd71148logapstdla|
+| L1            |  `code`   |   $12            |
+| L2            | _italic_  |              $1  |
 
 
 
