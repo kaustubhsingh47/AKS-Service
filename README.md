@@ -84,11 +84,19 @@ Deploy Logic Apps to automate workflows, such as processing data or triggering a
 Here's a list of resources used across the different levels of the Logic App Landing Zone:
 
 
-| Resource Type   |  Quantity | Name of Resource |
-|:----------------|:---------:|------------------|
-| Storage Account | **2**     | saeusd71148logapstdla - saeusd71148logapstdla|
-| L1            |  `code`   |   $12            |
-| L2            | _italic_  |              $1  |
+### Logic App Landing Zone Level 2
+
+| Tenant |  Subscription             | Workspace Name | Location | 
+|:-------|:-------------------------:|----------------|----------|
+| CORP3  | sub-corp3-d-71148-apptest |                | East US  | 
+
+
+| Resource Type        |  Quantity | Name of Resource                           | Resource Group         |
+|:---------------------|:---------:|--------------------------------------------|------------------------|
+| Storage Account      | **2**     | saeusd71148logapstdla, saeusd71148logapstd | rg-eus-d-71148-logap-p |
+| App Service Plan     | **1**     | sp-eus-d-71148-logap-std-la                | rg-eus-d-71148-logap-p |
+| Logic App (Standard) | **1**     | la-eus-d-71148-logap-std-la                | rg-eus-d-71148-logap   |
+| Disk Encryption Set  | **1**     | des-eus-d-71148-logap                      | rg-eus-d-71148-logap-p |
 
 
 
