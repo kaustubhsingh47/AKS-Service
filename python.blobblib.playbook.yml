@@ -1,0 +1,25 @@
+---
+- name: Set up for Cloud 2.0 demo
+  hosts: default
+  become: yes
+  tasks:
+    - name: Install Flask, azure-storage-blob and azure-identity python libraries
+      command: python3 -m pip install Flask azure-storage-blob azure-identity azure-cli 
+
+    - name: Download azcopy
+      get_url:
+        url: https://aka.ms/downloadazcopy-v10-linux
+        dest: /tmp/azcopy_linux_amd64.tar.gz
+
+    - name: Extract azcopy
+      unarchive:
+        src: /tmp/azcopy_linux_amd64.tar.gz
+        dest: /tmp
+        remote_src: yes
+
+    - name: Move azcopy to /usr/local/bin
+      command: mv /tmp/azcopy_linux_amd64_*/azcopy /usr/local/bin/azcopy
+
+    - name: Verify azcopy installation
+      command: azcopy --version
+      
